@@ -1,33 +1,372 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  clients:
+    client_advanced_searches:
+      client_advanced_searches:
+        government_form_one: Initial Information Form
+        search: Search
+        reset: Reset
+      load_save_search:
+        my_saved_search: My Saved Search
+        other_saved_search: Other Saved Search
+        search_settings_list: Search Settings List
+      my_saved_searches:
+        action: Action
+        date: Date
+        description: Description
+        load: Load
+        name: Name
+      other_saved_searches:
+        action: Action
+        date: Date
+        description: Description
+        load: Load
+        name: Name
+        owner: Owner
+      save_search_setting:
+        cancel: Cancel
+        description: Description
+        name: Name
+        new_search_setting: New Search Setting
+        save: Save
+
+    index:
+      age: Age
+      export_to_xls: Export to XLS
+      load_save_search: Load Saved Search
+      number_active_program: Number of Active Program
+      report_builder: Report Builder
+      results: Results
+      save_search_settings: Save Search Settings
+      status: Status
+    filter:
+      gender: Gender
+      reset: Reset
+      slug: ID
+      search: Search
+      status: Status
+    table_header:
+      age: Age
+      all_csi_assessments: All CSI Assessments
+      current_province: Current Province
+      district: District/Khan
+      date_of_birth: Date of Birth
+      gender: Gender
+      number_active_program: Number of Active Program
+      slug: ID
+      social_worker: DoSVY Social Worker
+      status: Status
+    show:
+      about_client: About Client
+      address: Address
+      age: Age
+      all_csi_assessments: All CSI Assessments
+      current_province: Current Province
+      district: District/Khan
+      gender: Gender
+      number_active_program: Number of Active Program
+      status: Status
+  custom_table:
+    active_program_stream: Active Program Stream
+    basic_fields: Client Basic Fields
+    csi_domain_scores: CSI Domain Scores
+    form_one_title:
+      active_program_stream: Active Program Stream
+      age: Age
+      birth_province: Birth Province
+      cambodia: Cambodia
+      caseworker_comment: Caseworker Comment
+      code: Code
+      commune: Commune/Sangkat
+      client_types: Client type (Client carer)
+      current_address: Current Address
+      current_province: Current Province
+      date_of_birth: Date of Birth
+      district: District/Khan
+      family_name: Family Name
+      gender: Gender
+      given_name: Given Name
+      gov_client_code: Client Code (Government Report)
+      gov_city: City/Province (Government Report)
+      gov_commune: Commune/Sangkat (Government Report)
+      gov_date: Date (Government Report)
+      gov_district: District/Khan (Government Report)
+      gov_interview_city: City/Province (Place of interview)
+      gov_interview_commune: Commune/Sangkat (Place of interview)
+      gov_interview_district: District/Khan (Place of interview)
+      gov_interview_village: Village (Place of interview)
+      gov_village_code: Village Code (Government Report)
+      interviewees_place_of_interview: Interviewees (Place of interview)
+      gov_carer_city: City/Province (Client carer)
+      gov_carer_commune: Commune/Sangkat (Client carer)
+      gov_carer_district: District/Khan (Client carer)
+      gov_carer_name: Name (Client carer)
+      gov_carer_home: Home (Client carer)
+      gov_carer_phone: Phone number (Client carer)
+      gov_carer_relationship: Relationship (Client carer)
+      gov_carer_street: Strret (Client carer)
+      gov_carer_village: Village (Client carer)
+      gov_caseworker_name: DoSVY Social Worker
+      gov_caseworker_phone: DoSVY Social Worker Phone Number
+      gov_guardian_comment: Comments from the client/guardians about issues and needs
+      gov_information_source: Information source (Client carer)
+      gov_referral_reason: Brief information on the reasons for client transmission
+      government_form_one: Initial Information Form
+      house_number: House
+      id: ID
+      local_family_name: Family Name (kh)
+      local_given_name: Given Name (kh)
+      ngo: NGO
+      select_columns: Select Columns
+      slug: ID
+      show_all: Show All
+      status: Status
+      street_number: Street
+      village: Village
+    table_header:
+      age: Age
+      birth_province: Birth Province
+      caseworker_comment: Caseworker Comment
+      code: Code
+      commune: Commune/Sangkat
+      client_types: Client type (Client carer)
+      current_address: Current Address
+      current_province: Current Province
+      date_of_birth: Date of Birth
+      district: District/Khan
+      family_name: Family Name
+      gender: Gender
+      given_name: Given Name
+      gov_city: City/Province (Government Report)
+      gov_commune: Commune/Sangkat (Government Report)
+      gov_client_code: Client Code (Government Report)
+      gov_date: Date (Government Report)
+      gov_district: District/Khan (Government Report)
+      gov_interview_city: City/Province (Place of interview)
+      gov_interview_commune: Commune/Sangkat (Place of interview)
+      gov_interview_district: District/Khan (Place of interview)
+      gov_interview_village: Village (Place of interview)
+      gov_village_code: Village Code (Government Report)
+      gov_carer_city: City/Province (Client carer)
+      gov_carer_commune: Commune/Sangkat (Client carer)
+      gov_carer_district: District/Khan (Client carer)
+      gov_carer_name: Name (Client carer)
+      gov_carer_home: Home (Client carer)
+      gov_carer_phone: Phone number (Client carer)
+      gov_carer_relationship: Relationship (Client carer)
+      gov_carer_street: Strret (Client carer)
+      gov_carer_village: Village (Client carer)
+      gov_caseworker_name: DoSVY Social Worker
+      gov_caseworker_phone: DoSVY Social Worker Phone Number
+      gov_guardian_comment: Comments from the client/guardians about issues and needs
+      gov_information_source: Information source (Client carer)
+      gov_referral_reason: Brief information on the reasons for client transmission
+      government_form_one: Initial Information Form
+      house_number: House
+      id: ID
+      interviewees_place_of_interview: Interviewees (Place of interview)
+      local_family_name: Family Name (kh)
+      local_given_name: Given Name (kh)
+      ngo: NGO
+      slug: ID
+      show_all: Show All
+      status: Status
+      street_number: Street
+      village: Village
+  datagrid:
+    columns:
+      clients:
+        total: Total
+      users:
+        current_password: Current Password
+        current_password_hint: We need your current password to make change
+        date_of_birth: Date of Birth
+        email: Email
+        first_name: First Name
+        id: ID
+        job_title: Job Title
+        last_name: Last Name
+        manage: Manage
+        mobile: Mobile
+        name: Name
+        password: Password
+        password_confirmation: Password Confirmation
+        password_hint: Leave it blank if you don't want to change password
+    from: From
+    to: To
+  devise:
+    confirmations:
+      confirmed: Your email address has been successfully confirmed.
+      send_instructions: You will receive an email with instructions for how to confirm your email address in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes.
+    failure:
+      already_authenticated: You are already signed in.
+      inactive: Your account is not activated yet.
+      invalid: Invalid %{authentication_keys} or password.
+      last_attempt: You have one more attempt before your account is locked.
+      locked: Your account is locked.
+      not_found_in_database: Invalid %{authentication_keys} or password.
+      timeout: Your session expired. Please sign in again to continue.
+      unauthenticated: You need to sign in or sign up before continuing.
+      unconfirmed: You have to confirm your email address before continuing.
+    mailer:
+      confirmation_instructions:
+        subject: Confirmation instructions
+      password_change:
+        subject: Password Changed
+      reset_password_instructions:
+        subject: Reset password instructions
+      unlock_instructions:
+        subject: Unlock instructions
+    omniauth_callbacks:
+      failure: Could not authenticate you from %{kind} because "%{reason}".
+      success: Successfully authenticated from %{kind} account.
+    passwords:
+      edit:
+        change_my_password: Change my password
+        change_your_password: Change your password
+        confirm_your_new_password: Confirm your new password
+        new_password: New password
+      new:
+        email: Email
+        forget_password: Forgot your password?
+        send_reset_password: Send me reset password instructions
+      no_token: You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided.
+      send_instructions: You will receive an email with instructions on how to reset your password in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes.
+      updated: Your password has been changed successfully. You are now signed in.
+      updated_not_active: Your password has been changed successfully.
+    registrations:
+      destroyed: Bye! Your account has been successfully cancelled. We hope to see you again soon.
+      edit:
+        are_you_sure: Are you sure?
+        calendar_integration: Calendar Integration
+        cancel: Cancel
+        current_password: Current Password
+        date_of_birth: Date of Birth
+        delete_my_account: Delete My Account
+        department: Department
+        email: Email
+        first_name: First Name
+        header: Edit Personal Information
+        job_title: Job Title
+        last_name: Last Name
+        leave_blank_if_you_dont_want_to_change: Leave this blank if you do not want to change
+        mobile: Mobile
+        overdue_task_summary_notify: Send me overdue task summary
+        password: Password
+        password_confirmation: Confirm Password
+        province: Province
+        save: Save
+        staff_performance_notification: Send me staff performance report
+        start_date: Start Date
+        we_need_your_current_password_to_confirm_your_changes: We need your current password to confirm your changes
+      signed_up: Welcome! You have signed up successfully.
+      signed_up_but_inactive: You have signed up successfully. However, we could not sign you in because your account is not yet activated.
+      signed_up_but_locked: You have signed up successfully. However, we could not sign you in because your account is locked.
+      signed_up_but_unconfirmed: A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.
+      update_needs_confirmation: You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address.
+      updated: Your account has been updated successfully.
+    sessions:
+      already_signed_out: Signed out successfully.
+      new:
+        email: Email
+        login: Log in
+        password: Password
+        remember_me: Remember Me
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+    shared:
+      links:
+        back: Back
+        forget_password: Forgot your password?
+        receive_confirm_instruction: Didn't receive confirmation instructions?
+        receive_unlock_instruction: Didn't receive unlock instructions?
+    unlocks:
+      send_instructions: You will receive an email with instructions for how to unlock your account in a few minutes.
+      send_paranoid_instructions: If your account exists, you will receive an email with instructions for how to unlock it in a few minutes.
+      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+  errors:
+    messages:
+      already_confirmed: was already confirmed, please try signing in
+      already_in_use: already in use
+      confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
+      expired: has expired, please request a new one
+      not_email: Not an email
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: '1 error prohibited this %{resource} from being saved:'
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+  layouts:
+    site_menu:
+      edit_profile: Edit Profile
+      dashboard: Dashboard
+      logout: Logout
+      users: Users
+    top_navbar:
+      logout: Logout
+  unauthorized:
+    default: This page cannot be accessed
+  users:
+    actions:
+      are_you_sure: Are you sure you want to delete?
+    create:
+      successfully_created: User has been successfully created.
+    destroy:
+      alert: User cannot be deleted.
+      successfully_deleted: User has been successfully deleted.
+    edit:
+      edit_user: Edit User
+    filter:
+      reset: Reset
+      search: Search
+    form:
+      cancel: Cancel
+      date_of_birth: Date of Birth
+      email: Email
+      enable_log_in_to_gov: Enable login to OSCaR Gov
+      enable_log_in_to_research: Enable login to OSCaR Research
+      first_name: First Name
+      id: ID
+      job_title: Job Title
+      last_name: Last Name
+      name: Name
+      password: Password
+      password_confirmation: Password Confirmation
+      roles: Permission
+      save: Save
+    index:
+      add_new: Add New User
+      export_to_xls: Export Users
+      results: Results
+      date_of_birth: Date of Birth
+      email: Email
+      enable_gov_log_in: Enable login to OSCaR Gov
+      enable_research_log_in: Enable login to OSCaR Research
+      export_to_xls: Export Users
+      id: ID
+      job_title: Job Title
+      manage: Manage
+      mobile: Mobile
+      name: Name
+      next: Next
+      previous: Previous
+      results: Results
+      search: Search
+    new:
+      new_user: New User
+    show:
+      about_user: About User
+      are_you_sure: Are you sure you want to delete?
+      date_of_birth: Date of Birth
+      email: Email
+      enable_gov_log_in: Enable login to OSCaR Gov
+      enable_research_log_in: Enable login to OSCaR Research
+      id: ID
+      job_title: Job Title
+    new:
+      new_user: New User
+    edit:
+      edit_user: Edit User
+    update:
+      successfully_updated: User has been successfully updated.

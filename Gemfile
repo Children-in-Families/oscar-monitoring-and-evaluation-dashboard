@@ -26,6 +26,8 @@ gem 'haml',                     '~> 5.1', '>= 5.1.2'
 gem 'haml-rails',               '~> 2.0', '>= 2.0.1'
 gem 'simple_form',              '~> 4.1'
 gem 'devise',                   '~> 4.7'
+gem 'pundit',                   '~> 2.1'
+gem 'kaminari',                 '~> 1.1', '>= 1.1.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def authorized_body
-    'unauthorized-background' unless true
+    'unauthorized-background' unless user_signed_in?
   end
 
   def clients_menu_active

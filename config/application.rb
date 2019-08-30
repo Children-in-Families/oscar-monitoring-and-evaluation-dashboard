@@ -24,7 +24,10 @@ module OscarMEDashboard
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # config.i18n.available_locales = [:km, :en]
+    config.i18n.default_locale = :en
+    config.i18n.available_locales = [:en, :km]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
     config.time_zone = "Asia/Bangkok"
     # config.exceptions_app = self.routes
 
