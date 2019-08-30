@@ -1,0 +1,38 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  primary:
+    <<: *default
+    database: oscar_m_e_dashboard_development
+  oscar_web:
+    <<: *default
+    database: oscar_development
+    migrations_paths: db/oscar_web_migrate
+
+test:
+  primary:
+    <<: *default
+    database: oscar_m_e_dashboard_test
+  oscar_web:
+    <<: *default
+    database: oscar_test
+    migrations_paths: db/oscar_web_migrate
+
+production:
+  primary:
+    <<: *default
+    database: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_NAME'] %>
+    username: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_USERNAME'] %>
+    password: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_PASSWORD'] %>
+  oscar_web:
+    <<: *default
+    database: <%= ENV['DATABASE_NAME'] %>
+    username: <%= ENV['DATABASE_USERNAME'] %>
+    password: <%= ENV['DATABASE_PASSWORD'] %>
+    host: <%= ENV['DATABASE_HOST'] %>
+    port: <%= ENV['DATABASE_PORT'] %>
