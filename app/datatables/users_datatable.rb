@@ -21,9 +21,8 @@ private
       [
         user.id,
         link_to(user.name, user),
-        user.date_of_birth,
         user.email,
-        user.job_title,
+        user.roles,
       ]
     end
   end
@@ -36,7 +35,7 @@ private
     users = User.order("#{sort_column} #{sort_direction}")
     users = users.page(page)
     if params[:sSearch].present?
-      users = users.where("first_name like :search or last_name like :search or mobile like :search or email like :search", search: "%#{params[:sSearch]}%")
+      users = users.where("first_name like :search or last_name like :search or email like :search or roles like :search", search: "%#{params[:sSearch]}%")
     end
     users
   end
@@ -50,7 +49,7 @@ private
   end
 
   def sort_column
-    columns = %w[id first_name date_of_birth mobile email job_title]
+    columns = %w[id first_name email roles]
     columns[params[:iSortCol_0].to_i]
   end
 

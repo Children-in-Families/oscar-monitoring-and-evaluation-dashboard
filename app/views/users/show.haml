@@ -22,16 +22,17 @@
             %table.table.table-bordered
               %tr
                 %td.spacing-first-col
-                  = t('.job_title')
+                  = t('.first_name')
                 %td
                   %strong
-                    = @user.job_title
+                    = @user.first_name
+
               %tr
                 %td.spacing-first-col
-                  = t('.mobile')
+                  = t('.last_name')
                 %td
                   %strong
-                  = @user.mobile
+                    = @user.last_name
               %tr
                 %td.spacing-first-col
                   = t('.email')
@@ -42,23 +43,3 @@
                       - object_emails.each do |object_email|
                         = mail_to object_email
 
-              %tr
-                %td.spacing-first-col
-                  = t('.date_of_birth')
-                %td
-                  %strong
-                    = @user.date_of_birth
-
-              %tr
-                %td.spacing-first-col
-                  = t('.enable_research_log_in')
-                %td
-                  %strong
-                    = @user.enable_research_log_in? ? 'Yes' : 'No'
-
-              %tr
-                %td.spacing-first-col
-                  = t('.enable_gov_log_in')
-                %td
-                  %strong
-                    = @user.enable_gov_log_in? ? 'Yes' : 'No'

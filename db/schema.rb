@@ -31,9 +31,6 @@ ActiveRecord::Schema.define(version: 2019_08_30_072119) do
     t.string "first_name", default: ""
     t.string "last_name", default: ""
     t.string "roles", default: "guest"
-    t.string "gender", default: ""
-    t.string "job_title", default: ""
-    t.date "date_of_birth"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

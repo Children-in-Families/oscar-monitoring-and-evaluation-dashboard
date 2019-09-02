@@ -20,24 +20,14 @@ OSCAR.UsersIndex = do ->
     # $('table.users thead tr th:last-child input').hide()
 
     table = $('table.users').DataTable(
-      # bServerSide: true
-      # bFilter: false
       'dom': 'irtp'
-      bLengthChange: false
-      sAjaxSource: $('#users').data('source')
-      "sScrollX": "auto"
-      'sScrollY': 'auto'
+      'bLengthChange': false
+      'sAjaxSource': $('#users').data('source')
       'bAutoWidth': true
+      'datawidth': '*'
       'orderCellsTop': true
       'fixedHeader': true
       'pageLength': 20
-      # 'columnDefs': [ {
-      #       'className': 'manage-column',
-      #       'targets': -1,
-      #       'data': null,
-      #       'defaultContent': '<button class="btn btn-xs btn-success btn-outline edit-user-button"><span class="fa fa-pencil edit-user-button"></span></button>
-      #                          <a data-confirm="Are you sure you want to delete?" class="btn btn-outline btn-danger btn-xs delete-user-button" rel="nofollow" data-method="delete"><i class="fa fa-trash delete-user-button"></i></a>'
-      #   } ]
 
       'language':
           'search': search,
