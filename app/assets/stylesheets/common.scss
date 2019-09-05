@@ -254,3 +254,82 @@ ul.dropdown-menu.dropdown-alerts {
   color: #fff;
   font-size: 36px;
 }
+
+body[id='changelogs-version'], body[id='clients-version'], body[id='users-version'] {
+  .modification-title {
+    margin-bottom: 30px;
+  }
+
+  .page-select-label {
+    line-height: 4;
+    margin-bottom: 0px;
+  }
+
+  .page-select {
+    margin-top: 8px;
+    .form-group
+    {
+      margin-bottom: 0px;
+    }
+  }
+
+  .btn-back {
+    min-width: 100px;
+  }
+
+  .panel-heading {
+    h5 {
+      color: #fff;
+      .label {
+        border: 2px solid #fff;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.usaid-logo {
+  width: 262px;
+}
+
+.margin-usaid-link {
+  margin-top: 40px;
+
+  a {
+    color: grey;
+  }
+}
+
+.footer {
+  padding: 0px 20px 10px 20px;
+}
+
+.modal-disclaimer-width {
+  width: 100%;
+  max-width: 80%;
+}
+
+@media (max-width: 425px) {
+  .margin-usaid-link {
+    margin-top: 0px;
+  }
+
+  .modal-disclaimer-width {
+    max-width: 95%;
+  }
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.padding-bottom {
+  padding-bottom: 115px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 0px 20px 0px 20px;
+  }
+}
+

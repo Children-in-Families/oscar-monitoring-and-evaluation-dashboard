@@ -28,6 +28,10 @@ gem 'simple_form',              '~> 4.1'
 gem 'devise',                   '~> 4.7'
 gem 'pundit',                   '~> 2.1'
 gem 'kaminari',                 '~> 1.1', '>= 1.1.1'
+gem 'browser',                  '~> 2.6', '>= 2.6.1'
+gem 'paper_trail',              '~> 10.3', '>= 10.3.1'
+gem 'paper_trail-association_tracking', '~> 2.0'
+gem 'draper',                   '~> 3.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

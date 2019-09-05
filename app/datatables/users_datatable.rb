@@ -1,5 +1,6 @@
 class UsersDatatable
-  delegate :params, :link_to, to: :@view
+  include Rails.application.routes.url_helpers
+  delegate :params, :link_to, :url_helpers, to: :@view
 
   def initialize(view)
     @view = view
@@ -22,7 +23,12 @@ private
         user.id,
         link_to(user.name, user),
         user.email,
-        user.roles,
+        [
+          link_to("<i class='fa fa-pencil'></i>".html_safe, edit_user_path(user), class: 'btn btn-outline btn-success btn-xs'),
+          link_to("<i class='fa fa-#{ user.deactivated ? 'lock' : 'unlock' }'></i>".html_safe, user_disable_path(user), class: 'btn btn-outline btn-primary btn-xs'),
+          link_to("<i class='fa fa-trash'></i>".html_safe, user_path(user), class: 'btn btn-outline btn-danger btn-xs', method: :delete, data: { confirm: I18n.t('users.actions.are_you_sure') })
+        ].join('&nbsp;&nbsp; '),
+        link_to(I18n.t('users.index.view'), user_version_path(user))
       ]
     end
   end
@@ -35,7 +41,7 @@ private
     users = User.order("#{sort_column} #{sort_direction}")
     users = users.page(page)
     if params[:sSearch].present?
-      users = users.where("first_name like :search or last_name like :search or email like :search or roles like :search", search: "%#{params[:sSearch]}%")
+      users = users.where("first_name like :search or last_name like :search or email like :search", search: "%#{params[:sSearch]}%")
     end
     users
   end
@@ -49,7 +55,7 @@ private
   end
 
   def sort_column
-    columns = %w[id first_name email roles]
+    columns = %w[id first_name email]
     columns[params[:iSortCol_0].to_i]
   end
 

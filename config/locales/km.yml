@@ -304,6 +304,7 @@ km:
       dashboard: តារាងទិន្នន័យ
       logout: ចាកចេញ
       users: អ្នកប្រើ
+      clients: អតិចិជន
     top_navbar:
       logout: ចាកចេញ
   unauthorized:
@@ -316,6 +317,8 @@ km:
     destroy:
       alert: អ្នកប្រើប្រាស់មិនអាចលុបបានទេ
       successfully_deleted: អ្នកប្រើប្រាស់ត្រូវបានលុបដោយជោគជ័យ
+    disable:
+      successfully_disable: ការអនុញ្ញាតអោយចូលរបស់អ្នកប្រើប្រាស់ត្រូវបានផ្លាស់ប្ដូរដោយជោគជ័យ
     form:
       cancel: ទុកជាមោឃៈ
       date_of_birth: ថ្ងៃ ខែ ឆ្នាំ កំណើត
@@ -333,6 +336,7 @@ km:
       save: រក្សាទុក
     index:
       add_new: បន្ថែមឣ្នកប្រើថ្មី
+      changelogs: ប្រវត្តិនៃកំណែ
       export_to_xls: ទាញចេញជាឯកសារប្រភេទ XLS
       results: លទ្ធផល
       date_of_birth: ថ្ងៃ ខែ ឆ្នាំ កំណើត
@@ -348,6 +352,7 @@ km:
       previous: ចុងក្រោយ
       results: លទ្ធផល
       search: ស្វែងរក
+      view: មើល
     new:
       new_user: New User
     show:

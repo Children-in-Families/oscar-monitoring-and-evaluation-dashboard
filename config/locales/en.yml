@@ -307,6 +307,110 @@ en:
       logout: Logout
   unauthorized:
     default: This page cannot be accessed
+  shared:
+    form_builder:
+      file_field:
+        allow_file_size: Allowed file types
+        max_file_size: "*Maximum file size: 5MB/file and 30MB/upload."
+      list_attachment:
+        are_you_sure: Are you sure you want to delete?
+        preview_download: Preview & Download
+    per_page_form:
+      show: Show
+    version_type:
+      assessment:
+        after: After
+        assessment: Assessment
+        before: Before
+        change: did the following change
+        date_deleted: Date deleted
+        no_modification: There are no any changelog.
+        'on': 'on'
+        value_of: Value of
+      case_note:
+        case_note: Case Note
+        change: did the following change
+        'on': 'on'
+      client:
+        after: After
+        before: Before
+        change: did the following change
+        client: Client
+        date_deleted: Date deleted
+        no_modification: There are no any changelog.
+        'on': 'on'
+        value_of: Value of
+      client_enrollment:
+        after: After
+        before: Before
+        change: did the following change
+        client_enrollment: Client Enrollment
+        date_deleted: Date
+        no_modification: There are no any changelog.
+        'on': 'on'
+        organisation_type: Organisation Type
+        value_of: Value of
+      common:
+        able_screening_question: Able Screening Question
+        after: After
+        agency: Agency
+        assessment: Assessment
+        before: Before
+        case: Case
+        case_cote: Case Note
+        case_note: Casenote
+        change: did the following change
+        changelog: Release log
+        client: Client
+        client_custom_field: Client Custom Forms
+        create: Create
+        custom_field: Custom Form
+        date_deleted: Date deleted
+        delete: Delete
+        department: Department
+        district: District/Khan
+        domain: Domain
+        domain_group: Domain Group
+        donor: Donor
+        family: Family
+        family_custom_field: Family Custom Forms
+        id: ID
+        intervention: Intervention
+        location: Location
+        material: Equipment/Material
+        no_modification: There are no any changelog.
+        'on': 'on'
+        organisation_type: Organisation Type
+        organization_type: Organisation Type
+        partner: Partner
+        partner_custom_field: Partner Custom Forms
+        progress_note: Progress Note
+        progress_note_type: Type of Note
+        province: Province
+        quantitative_case: Specific Referral Data Option
+        quantitative_type: Custom Referral Data
+        referral_source: Referral Source
+        stage: Stage
+        survey: Survey
+        task: Task
+        update: Update
+        user: User
+        user_custom_field: User Custom Forms
+        value_of: Value of
+      program_rule_after:
+        after: After
+      program_rule_before:
+        before: Before
+      program_stream:
+        after: After
+        before: Before
+        change: did the following change
+        date_deleted: Date
+        more_detail: More Details
+        no_modification: There are no any changelog.
+        'on': 'on'
+        program_stream: Program Stream
+        value_of: Value of
   users:
     actions:
       are_you_sure: Are you sure you want to delete?
@@ -315,6 +419,8 @@ en:
     destroy:
       alert: User cannot be deleted.
       successfully_deleted: User has been successfully deleted.
+    disable:
+      successfully_disable: User log in permission has been successfully changed.
     edit:
       edit_user: Edit User
     filter:
@@ -337,6 +443,7 @@ en:
       save: Save
     index:
       add_new: Add New User
+      changelogs: Changelog
       export_to_xls: Export Users
       results: Results
       date_of_birth: Date of Birth
@@ -353,6 +460,7 @@ en:
       previous: Previous
       results: Results
       search: Search
+      view: View
     new:
       new_user: New User
     show:
@@ -370,3 +478,6 @@ en:
       edit_user: Edit User
     update:
       successfully_updated: User has been successfully updated.
+    version:
+      back: Back
+      modification_of: Changelog of

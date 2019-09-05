@@ -1,0 +1,11 @@
+.panel.panel-default
+  .panel-body
+    - if @versions&.any?
+      - @versions.decorate.each do |version|
+        = render 'shared/version_type/common',           version: version
+        = render 'shared/version_type/user',             version: version
+        =# render 'shared/version_type/client',             version: version
+    - else
+      %p= t('.no_modification')
+  .text-center
+    = paginate @versions

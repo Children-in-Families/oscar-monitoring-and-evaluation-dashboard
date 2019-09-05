@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_paper_trail_whodunnit
 
   rescue_from Pundit::NotAuthorizedError do |exception|
     redirect_to root_url, alert: 'You are not authorized to access this page.'
@@ -22,13 +23,24 @@ class ApplicationController < ActionController::Base
   protected
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :date_of_birth, :job_title, :mobile])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
     end
 
   private
 
     def set_locale
-      locale = I18n.available_locales.include?(params[:locale].to_sym) ? params[:locale] : I18n.locale if params[:locale].present?
-      I18n.locale = locale || I18n.locale
+      if detect_browser.present?
+        flash.clear
+        flash[:alert] = detect_browser
+      end
+      I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
+      session[:locale] = I18n.locale
+    end
+
+    def detect_browser
+      lang = params[:locale] || locale.to_s
+      if browser.firefox? && browser.platform.mac? && lang == 'km'
+        "Khmer fonts for Firefox do not render correctly. Please use Google Chrome browser instead if you intend to use OSCaR in Khmer language."
+      end
     end
 end

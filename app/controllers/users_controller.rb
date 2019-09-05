@@ -55,9 +55,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def version
+    page = params[:per_page] || 20
+    @user     = User.find(params[:user_id])
+    @versions = @user.versions.reorder(created_at: :desc).page(params[:page]).per(page)
+  end
+
   def disable
     @user = User.find(params[:user_id])
-    redirect_to users_path, notice: t('.successfully_disable') if @user.update_attributes(disable: !@user.disable)
+    user_disable_status = @user.deactivated
+    @user.deactivated = !@user.deactivated
+    @user.save(validate: false)
+    if user_disable_status == false
+      @user.update_attributes(deactivated_at: DateTime.now.in_time_zone(Time.zone))
+    elsif user_disable_status == true
+      @user.update_attributes(activated_at: DateTime.now.in_time_zone(Time.zone))
+    end
+    redirect_to users_path, notice: t('.successfully_disable')
   end
 
   private
