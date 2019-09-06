@@ -328,6 +328,9 @@ body[id='changelogs-version'], body[id='clients-version'], body[id='users-versio
 }
 
 @media (min-width: 768px) {
+  .navbar-right {
+    margin-right: 10px;
+  }
   .footer {
     padding: 0px 20px 0px 20px;
   }

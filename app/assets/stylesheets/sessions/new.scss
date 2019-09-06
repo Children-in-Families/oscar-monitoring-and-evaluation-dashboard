@@ -3,4 +3,10 @@ body[id='sessions-create'] {
   .icheckbox_square-green{
     margin-right: 10px;
   }
+
+  @media (min-width: 768px){
+    .navbar-right {
+      margin-top: 10px;
+    }
+  }
 }

@@ -41,5 +41,3 @@
 //= require clients/index
 //= require data_trackers/index
 //= require filters
-//= require advanced_filter_builder
-//= require client_advanced_searches

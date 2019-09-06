@@ -72,7 +72,12 @@ module VersionHelper
     elsif k == 'reset_password_token'
       val = content_tag(:span, truncate(val), title: val)
     end
-    val
+
+    val = responds_to_datetime?(val) ? val.to_datetime.to_s(:datetime) : val
+  end
+
+  def responds_to_datetime?(date)
+    true if date.to_datetime rescue false
   end
 
   def version_item_type_active?(item_type = '', custom_formable_type = {})

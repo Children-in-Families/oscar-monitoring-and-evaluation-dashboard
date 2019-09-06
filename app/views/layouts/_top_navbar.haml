@@ -5,15 +5,39 @@
         %a.navbar-minimalize.minimalize-styl-2.btn.btn-primary{:href => "#"}
           %i.fa.fa-bars
     %ul.nav.navbar-top-links.navbar-right
-      %li.local-flag
-        - if I18n.locale == :en
-          = link_to(url_for(request.params.merge({locale: 'km'})), id: 'lang-kh') do
-            = image_tag('Cambodia.png')
-        - else
-          = link_to(url_for(request.params.merge({locale: 'en'})), id: 'lang-en') do
-            = image_tag('United-Kingdom.png')
+      %li#language-selection-dropdown
+        .btn-group#language-selection
+          %button.btn.btn-default.dropdown-toggle.btn-sm{ "aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button" }
+            = t('.language')
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              - request_method = (params[:controller] == 'clients' && params[:action] == 'index') ?  'Post' : 'Get'
+              = link_to(url_for(request.params.merge({locale: 'km'})), id: 'lang-km', method: request_method) do
+                = image_tag('Cambodia.png')
+                = t('.khmer')
+              = link_to(url_for(request.params.merge({locale: 'en'})), id: 'lang-en', method: request_method) do
+                = image_tag('United-Kingdom.png')
+                = t('.english')
+              = link_to(url_for(request.params.merge({locale: 'my'})), id: 'lang-my', method: request_method) do
+                = image_tag('Myanamar-icon.png')
+                = t('.burmese')
+
       - if user_signed_in?
         %li
           = link_to destroy_user_session_path, method: :delete do
             %i.fa.fa-sign-out
-            = t('.logout')
+            = t('.log_out')
+        %li.account-setting.visible-xs-block
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %span.clear
+              %span.block
+                %i.fa.fa-tasks
+          %ul.dropdown-menu.animated.fadeInRight
+            %li
+              %p.logged-in-user
+                %strong= "#{current_user.name} (#{current_user.roles})"
+            %li.divider
+            %li
+              = link_to t('.edit_profile'), edit_user_path(current_user)
+

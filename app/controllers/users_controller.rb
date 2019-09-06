@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   before_action :find_user, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -23,7 +22,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     authorize @user
     if @user.save
-      redirect_to @user, notice: t('.successfully_created')
+      if current_user.admin?
+        redirect_to @user, notice: t('.successfully_created')
+      else
+        redirect_to root_path
+      end
     else
       render :new
     end
@@ -40,7 +43,11 @@ class UsersController < ApplicationController
   def update
     authorize @user
     if @user.update_attributes(user_params)
-      redirect_to @user, notice: t('.successfully_updated')
+      if current_user.admin?
+        redirect_to @user, notice: t('.successfully_updated')
+      else
+        redirect_to root_path
+      end
     else
       render :edit
     end

@@ -194,6 +194,18 @@ km:
         password_confirmation: បញ្ជាក់ពាក្យសម្ងាត់
     from: ចាប់ពី
     to: ដល់
+  data_trackers:
+    index:
+      able_screening_questions: សំនួរ Able Screening
+      agencies: អង្គភាព
+      all: ទាំងអស់
+      all_modification: ប្រវត្តិនៃកំណែទាំងអស់
+      clients: អតិថិជន
+      filter_by_item: ច្រោះទិន្នន័យតាម
+      user_custom_fields: ទម្រង់បែបបទរបស់អ្នកប្រើប្រាស់
+      users: អ្នកប្រើ
+    per_page_form:
+      show: បង្ហាញ
   devise:
     confirmations:
       confirmed: អាសយដ្ឋានអ៊ីម៉ែលរបស់អ្នកត្រូវបានបញ្ជាក់ដោយជោគជ័យ!
@@ -300,6 +312,7 @@ km:
         other: "%{count} កំហុស បានហាមឃាត់ %{resource} ពីការរក្សាទុក"
   layouts:
     side_menu:
+      changelogs: ប្រវត្តិនៃកំណែទិន្នន័យ
       edit_profile: កែសម្រួលព័ត៌មានផ្ទាល់ខ្លួន
       dashboard: តារាងទិន្នន័យ
       logout: ចាកចេញ
@@ -307,6 +320,74 @@ km:
       clients: អតិចិជន
     top_navbar:
       logout: ចាកចេញ
+  shared:
+    per_page_form:
+      show: បង្ហាញ
+    version_type:
+      client:
+        after: ក្រោយកំណែ
+        before: មុនកំណែ
+        change: បានធ្វើកំណែប្រែខាងក្រោម លើ
+        client: អតិថិជន
+        date_deleted: កាលបរិច្ឆេទនៃការលុប
+        no_modification: មិនមានប្រវត្តិកំណែ
+        'on': របស់
+        value_of: តម្លៃនៃ
+      common:
+        able_screening_question: សំនួរ Able Screening
+        after: ក្រោយកំណែ
+        agency: អង្គភាព
+        assessment: ការប៉ាន់ប្រមាណ
+        before: មុនកំណែ
+        case: ករណី
+        case_cote: កំណត់ត្រាករណី
+        case_note: កំណត់ត្រាករណី
+        change: បានធ្វើកំណែប្រែខាងក្រោម លើ
+        changelog: ប្រវត្តិនៃកំណែ
+        client: អតិថិជន
+        client_custom_field: ទម្រង់បែបបទរបស់អតិថិជន
+        create: បង្កើត
+        custom_field: ទម្រង់បែបបទ
+        date_deleted: កាលបរិច្ឆេទនៃការលុប
+        delete: លុបចេញ
+        department: កម្មវិធី
+        district: ស្រុក/ខណ្ឌ
+        domain: កត្តា
+        domain_group: ការប្រមូលបណ្ដុំកត្តា
+        donor: ម្ចាស់ជំនួយ
+        family: គ្រួសារ
+        family_custom_field: ទម្រង់បែបបទរបស់គ្រួសារ
+        id: លេខសំគាល់
+        intervention: ចំនុចដែលត្រូវធ្វើ
+        location: កន្លែង
+        material: របស់របរ/សំភារៈ
+        no_modification: មិនមានប្រវត្តិកំណែ
+        'on': របស់
+        organisation_type: ប្រភេទឣង្គភាព
+        organization_type: ប្រភេទឣង្គភាព
+        partner: ដៃគូ
+        partner_custom_field: ទម្រង់បែបបទរបស់ដៃគូ
+        progress_note: កំណត់សំគាល់ការរីកចំរើន
+        progress_note_type: កំណត់សំគាល់
+        province: ខេត្ត
+        quantitative_case: ទិន្នន័យនៃបរិមាណ
+        quantitative_type: ពត៌មានបញ្ជូនបន្ថែម
+        referral_source: ប្រភពនៃការបញ្ជូន
+        stage: តំណាក់កាល
+        survey: ការស្ទង់មតិ
+        task: កាតព្វកិច្ច
+        update: កែសម្រួល
+        user: អ្នកប្រើ
+        user_custom_field: ទម្រង់បែបបទរបស់អ្នកប្រើ
+        value_of: តម្លៃនៃ
+      user:
+        after: ក្រោយកំណែ
+        before: មុនកំណែ
+        change: បានធ្វើកំណែប្រែខាងក្រោម លើ
+        client: អតិថិជន
+        date_deleted: កាលបរិច្ឆេទនៃការលុប
+        no_modification: មិនមានប្រវត្តិកំណែ
+        'on': របស់
   unauthorized:
     default: មិនអាចដំណើរការចូលបានទេ
   users:

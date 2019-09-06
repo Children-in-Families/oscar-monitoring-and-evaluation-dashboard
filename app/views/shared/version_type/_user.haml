@@ -29,7 +29,7 @@
                 %td.col-sm-4
                   = version.reify.slug
                 %td.col-sm-4
-                  = date_time_format(version.created_at)
+                  = version.created_at.to_s(:datetime)
         - else
           %table.table.table-hover
             %thead
@@ -38,7 +38,7 @@
                 %th.col-sm-4.truncate= t('.before')
                 %th.col-sm-4.truncate= t('.after')
             %tbody.client
-              - version.changeset&.each do |k, v|
+              - version.changeset.each do |k, v|
                 - next if version_keys_skipable?(k, version.item_type)
                 %tr.client-row
                   %td.col-sm-4.client-id

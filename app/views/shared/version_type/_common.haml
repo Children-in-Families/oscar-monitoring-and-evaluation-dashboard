@@ -4,7 +4,13 @@
       %h5
         .row
           .col-xs-12.col-md-9.col-lg-10
-            %p= "#{version.whodunnit} #{t('.change')}."
+            - if controller_name == 'data_trackers'
+              %p
+                = "#{version.whodunnit} #{t('.change')} #{t('.on')}"
+                = t(".#{version.item_type.underscore}")
+                = "##{version.item_id}."
+            - else
+              %p= "#{version.whodunnit} #{t('.change')}."
           .col-xs-12.col-md-3.col-lg-2.text-right
             %p{ class: "label label-#{version_color(version.event)}" }
               = version.event_formated
@@ -23,7 +29,7 @@
                 %td.col-sm-4
                   = version.reify.id
                 %td.col-sm-4
-                  = date_time_format(version.created_at)
+                  = version.created_at.to_s(:datetime)
         - else
           %table.table.table-hover
             %thead
@@ -32,7 +38,7 @@
                 %th.col-sm-4.truncate= t('.before')
                 %th.col-sm-4.truncate= t('.after')
             %tbody
-              - version.changeset&.each do |k, v|
+              - version.changeset.each do |k, v|
                 - next if version_keys_skipable?(k, version.item_type)
                 %tr.get-value
                   %td.col-sm-4.attribute

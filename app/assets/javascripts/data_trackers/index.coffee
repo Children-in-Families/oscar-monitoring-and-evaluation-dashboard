@@ -1,4 +1,4 @@
-CIF.Data_trackersIndex = do ->
+OSCAR.Data_trackersIndex = do ->
   _init = ->
     _submitPerPageParams()
     _initProgramRule()
