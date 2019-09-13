@@ -24,7 +24,6 @@ Rails.application.configure do
 
   # Compress JavaScripts.
   config.assets.js_compressor = :uglifier
-
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
@@ -35,6 +34,7 @@ Rails.application.configure do
   # config.action_controller.asset_host = 'http://assets.example.com'
   config.action_controller.asset_host = "//#{ENV['S3_BUCKET_NAME']}.s3.amazonaws.com"
   config.assets.prefix = "/assets"
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX

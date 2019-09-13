@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_paper_trail_whodunnit
 
+  rescue_from ActionController::RoutingError, with: -> { render_404  }
+
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    render file: "#{Rails.root}/app/views/errors/404", layout: false, status: :not_found
+  end
+
   rescue_from Pundit::NotAuthorizedError do |exception|
     redirect_to root_url, alert: 'You are not authorized to access this page.'
   end
@@ -20,6 +26,8 @@ class ApplicationController < ActionController::Base
     root_url
   end
 
+  helper_method :current_donor
+
   protected
 
     def configure_permitted_parameters
@@ -27,6 +35,10 @@ class ApplicationController < ActionController::Base
     end
 
   private
+
+    def current_donor
+      Donor.current
+    end
 
     def set_locale
       if detect_browser.present?

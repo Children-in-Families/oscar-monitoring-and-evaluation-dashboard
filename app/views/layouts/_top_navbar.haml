@@ -19,9 +19,6 @@
               = link_to(url_for(request.params.merge({locale: 'en'})), id: 'lang-en', method: request_method) do
                 = image_tag('United-Kingdom.png')
                 = t('.english')
-              = link_to(url_for(request.params.merge({locale: 'my'})), id: 'lang-my', method: request_method) do
-                = image_tag('Myanamar-icon.png')
-                = t('.burmese')
 
       - if user_signed_in?
         %li

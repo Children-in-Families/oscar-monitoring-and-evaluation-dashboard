@@ -33,6 +33,12 @@ gem 'paper_trail',              '~> 10.3', '>= 10.3.1'
 gem 'paper_trail-association_tracking', '~> 2.0'
 gem 'draper',                   '~> 3.1'
 
+gem 'apartment', github: 'influitive/apartment', branch: 'development'
+
+group :staging, :production do
+  gem 'appsignal',                '~> 2.3', '>= 2.3.7'
+end
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails',            '~> 3.8', '>= 3.8.2'
@@ -44,6 +50,11 @@ group :development do
   gem 'listen',                 '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen',  '~> 2.0.0'
+  gem 'capistrano-rails',         '~> 1.1.1'
+  gem 'capistrano-passenger',     '~> 0.1.1'
+  gem 'capistrano-rvm',           '~> 0.1.2'
+  gem 'capistrano-sidekiq',       github: 'seuros/capistrano-sidekiq'
+  gem 'capistrano-foreman'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

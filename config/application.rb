@@ -23,6 +23,9 @@ module OscarMEDashboard
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    # config.middleware.use Apartment::Elevators::Subdomain
+    # config.middleware.insert_before Warden::Manager, Apartment::Elevators::Subdomain
+    config.hosts.clear
 
     config.i18n.default_locale = :en
     config.i18n.available_locales = [:en, :km]
@@ -41,5 +44,8 @@ module OscarMEDashboard
       g.channel         assets: false
       g.jbuilder        false
     end
+
+    config.exceptions_app = self.routes
+
   end
 end
