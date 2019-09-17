@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_27_045104) do
+ActiveRecord::Schema.define(version: 2019_09_10_023646) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -429,8 +429,6 @@ ActiveRecord::Schema.define(version: 2019_08_27_045104) do
     t.integer "village_id"
     t.string "profile"
     t.integer "referral_source_category_id"
-    t.integer "default_assessments_count", default: 0, null: false
-    t.integer "custom_assessments_count", default: 0, null: false
     t.string "archived_slug"
     t.index ["commune_id"], name: "index_clients_on_commune_id"
     t.index ["district_id"], name: "index_clients_on_district_id"

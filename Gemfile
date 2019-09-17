@@ -43,6 +43,12 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails',            '~> 3.8', '>= 3.8.2'
   gem 'pry-rails',              '~> 0.3.9'
+  gem 'factory_bot_rails',      '~> 5.0', '>= 5.0.2'
+  gem 'capybara',               '~> 3.29'
+  gem 'launchy',                '~> 2.4', '>= 2.4.3'
+  gem 'poltergeist',            '~> 1.18', '>= 1.18.1'
+  gem 'thin',                   '~> 1.7', '>= 1.7.2'
+  gem 'ffaker',                 '~> 2.1.0'
 end
 
 group :development do
@@ -50,11 +56,16 @@ group :development do
   gem 'listen',                 '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen',  '~> 2.0.0'
-  gem 'capistrano-rails',         '~> 1.1.1'
-  gem 'capistrano-passenger',     '~> 0.1.1'
-  gem 'capistrano-rvm',           '~> 0.1.2'
-  gem 'capistrano-sidekiq',       github: 'seuros/capistrano-sidekiq'
+  gem 'capistrano-rails',       '~> 1.1.1'
+  gem 'capistrano-passenger',   '~> 0.1.1'
+  gem 'capistrano-rvm',         '~> 0.1.2'
+  gem 'capistrano-sidekiq',     github: 'seuros/capistrano-sidekiq'
   gem 'capistrano-foreman'
+end
+
+group :test do
+  gem 'database_cleaner',       '~> 1.7'
+  gem 'shoulda-matchers',       '~> 4.1', '>= 4.1.2'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

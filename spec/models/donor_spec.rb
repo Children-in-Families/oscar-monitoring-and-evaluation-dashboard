@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Donor, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'validations' do
+    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:schema_name) }
+    it { should validate_uniqueness_of(:schema_name).case_insensitive }
+  end
 end

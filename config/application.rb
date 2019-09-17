@@ -38,6 +38,8 @@ module OscarMEDashboard
     config.generators do |g|
       g.template_engine :haml
       g.test_framework  :rspec, fixture: false
+      g.fixture_replacement :factory_bot
+      g.factory_bot     suffix: "factory"
       g.stylesheets     false
       g.javascripts     false
       g.helper          false

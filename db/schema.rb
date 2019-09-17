@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2019_09_06_080404) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name", default: ""
     t.string "last_name", default: ""
-    t.string "roles", default: "guest"
+    t.string "roles", default: "viewer"
     t.boolean "deactivated", default: false
     t.datetime "activated_at"
     t.datetime "deactivated_at"

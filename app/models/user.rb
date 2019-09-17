@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
   ROLES = ['admin', 'viewer'].freeze
 
@@ -8,7 +6,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: { case_sensitive: false }
   validates :last_name, :first_name, presence: true
-  validates :roles, inclusion: { in: ROLES }
+  validates :roles, presence: true, inclusion: { in: ROLES }
   validate  :validate_role
 
   ROLES.each do |role|
