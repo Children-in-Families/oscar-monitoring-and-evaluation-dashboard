@@ -24,7 +24,7 @@ gem 'icheck-rails',             '~> 1.0', '>= 1.0.2.2'
 
 gem 'haml',                     '~> 5.1', '>= 5.1.2'
 gem 'haml-rails',               '~> 2.0', '>= 2.0.1'
-gem 'simple_form',              '~> 4.1'
+gem 'simple_form',              '~> 5.0'
 gem 'devise',                   '~> 4.7'
 gem 'pundit',                   '~> 2.1'
 gem 'kaminari',                 '~> 1.1', '>= 1.1.1'
