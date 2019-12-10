@@ -65,8 +65,8 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "oscar_m_e_dashboard_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.asset_host = "https://oscarhq.com"
-  config.action_mailer.default_url_options = { host: 'https://oscarhq.com' }
+  config.action_mailer.asset_host = "http://oscarhq-staging.com"
+  config.action_mailer.default_url_options = { host: 'http://oscarhq-staging.com' }
   config.assets.digest = true
   config.assets.enabled = true
   config.assets.initialize_on_precompile = true

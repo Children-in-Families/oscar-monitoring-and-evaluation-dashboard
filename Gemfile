@@ -37,6 +37,8 @@ gem 'apartment', github: 'influitive/apartment', branch: 'development'
 
 group :staging, :production do
   gem 'appsignal',                '~> 2.3', '>= 2.3.7'
+  gem 'asset_sync',               '~> 2.8', '>= 2.8.1'
+  gem 'fog-aws',                  '~> 3.5', '>= 3.5.2'
 end
 
 group :development, :test do
