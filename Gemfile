@@ -32,6 +32,7 @@ gem 'browser',                  '~> 2.6', '>= 2.6.1'
 gem 'paper_trail',              '~> 10.3', '>= 10.3.1'
 gem 'paper_trail-association_tracking', '~> 2.0'
 gem 'draper',                   '~> 3.1'
+gem 'dotenv-rails',             '~> 2.7', '>= 2.7.5'
 
 gem 'apartment', github: 'influitive/apartment', branch: 'development'
 
