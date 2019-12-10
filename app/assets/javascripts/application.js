@@ -6,16 +6,12 @@
 //= require dataTables/extras/dataTables.responsive
 //= require bootstrap-sprockets
 
-
 //= require datatables/dataTables.buttons.min
 //= require datatables/buttons.flash.min
 //= require datatables/jszip.min
 //= require datatables/buttons.html5.min
 
-//= require datepicker
-//= require bootstrap-datepicker
-//= require bootstrap-datepicker/core
-//= require bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js
+// require bootstrap-datepicker
 //= require image_map_resizer/imageMapResizer.min
 //= require select2
 //= require icheck
@@ -28,7 +24,6 @@
 //= require slimscroll/jquery.slimscroll.min
 //= require inspinia.js
 //= require toastr/toastr.min
-//= require query_builder/query-builder.standalone.min
 
 //LOAD MODULE
 //= require namespace

@@ -18,7 +18,7 @@ gem 'sass-rails',               '~> 5'
 gem 'jquery-rails',             '~> 4.3', '>= 4.3.5'
 gem 'font-awesome-rails',       '~> 4.7', '>= 4.7.0.5'
 gem 'jquery-datatables-rails',  '~> 3.4'
-gem 'bootstrap-datepicker-rails', '~> 1.8', '>= 1.8.0.1'
+# gem 'bootstrap-datepicker-rails', '~> 1.8', '>= 1.8.0.1'
 gem 'select2-rails',            '~> 4.0', '>= 4.0.3'
 gem 'icheck-rails',             '~> 1.0', '>= 1.0.2.2'
 
