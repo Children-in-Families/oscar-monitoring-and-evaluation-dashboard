@@ -18,9 +18,13 @@ staging:
   database: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_NAME'] %>
   username: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_USERNAME'] %>
   password: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
 
 production:
   <<: *default
   database: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_NAME'] %>
   username: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_USERNAME'] %>
   password: <%= ENV['OSCAR_M_E_DASHBOARD_DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
