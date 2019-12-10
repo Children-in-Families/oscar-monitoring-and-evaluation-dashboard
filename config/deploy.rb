@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.1"
 
-set :application, 'oscar-m-e-dashboard'
+set :application, 'oscar-monitoring-and-evaluation-dashboard'
 set :repo_url, "git@github.com:rotati/#{fetch(:application)}.git"
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :deploy_to, "/var/www/#{fetch(:application)}"
