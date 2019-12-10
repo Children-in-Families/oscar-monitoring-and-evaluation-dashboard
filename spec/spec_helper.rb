@@ -86,7 +86,7 @@ RSpec.configure do |config|
     Capybara.default_max_wait_time = 10
     Capybara.always_include_port = true
     Apartment::Tenant.switch! 'app'
-    sub_domain = Donor.current.schema_name
+    sub_domain = Donor.current ? Donor.current.schema_name : 'app'
     Capybara.app_host = "http://#{sub_domain}.lvh.me"
   end
 
