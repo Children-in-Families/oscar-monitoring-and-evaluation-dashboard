@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'dashboard#index'
+  root to: 'dashboards#index'
   devise_for :users, controllers: { registrations: 'registrations', sessions: 'sessions', passwords: 'passwords' }
 
-  get '/dashboard' => 'dashboard#index'
-  get '/robots.txt' => 'dashboard#robots'
+  get '/dashboards' => 'dashboards#index'
+  get '/robots.txt' => 'dashboards#robots'
   get '/data_trackers' => 'data_trackers#index'
 
   resources :clients, only: [:index]
