@@ -14,6 +14,9 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = ENV['SENDER_EMAIL']
 
+  config.mailer.class_eval do
+    helper :subdomain
+  end
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
