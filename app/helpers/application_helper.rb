@@ -48,10 +48,10 @@ module ApplicationHelper
     if current_donor.logo.attached?
       if current_donor.logo.representable?
         link_to dashboards_url(subdomain: current_donor.schema_name) do
-          image_tag current_donor.logo, width: 100, class: klasses
+          image_tag asset_url(current_donor.public_logo_url), width: 100, class: klasses
         end
       elsif current_donor.logo.image?
-        link_to image_tag(current_donor.logo, width: 100, class: klasses, style: 'background-color: white; padding: 5px;'), dashboards_url(subdomain: current_donor.schema_name), class: 'donor-logo-link'
+        link_to image_tag(asset_url(current_donor.public_logo_url), width: 100, class: klasses, style: 'background-color: white; padding: 5px;'), dashboards_url(subdomain: current_donor.schema_name), class: 'donor-logo-link'
       else
         image_tag current_donor.logo.filename.to_s, class: klasses
       end
