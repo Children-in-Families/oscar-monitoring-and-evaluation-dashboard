@@ -20,7 +20,7 @@
         .logo-element
           = current_donor_logo('log-min img-responsive')
       %li{ class: is_active_controller('dashboard') }
-        = link_to root_path do
+        = link_to dashboards_path do
           = fa_icon('th-large')
           %span.nav-label= t('.dashboard')
       - if policy(current_user).index?
