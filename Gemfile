@@ -8,7 +8,6 @@ gem 'pg',                       '>= 0.18', '< 2.0'
 gem 'puma',                     '~> 3.11'
 gem 'turbolinks',               '~> 5'
 gem 'jbuilder',                 '~> 2.7'
-gem 'image_processing',         '~> 1.2'
 gem 'bootsnap',                 '>= 1.4.2', require: false
 
 gem 'uglifier',                 '>= 1.3.0'
@@ -33,6 +32,7 @@ gem 'paper_trail',              '~> 10.3', '>= 10.3.1'
 gem 'paper_trail-association_tracking', '~> 2.0'
 gem 'draper',                   '~> 3.1'
 gem 'dotenv-rails',             '~> 2.7', '>= 2.7.5'
+gem 'image_processing',         '~> 1.9', '>= 1.9.3'
 
 gem 'apartment', github: 'influitive/apartment', branch: 'development'
 
@@ -40,6 +40,7 @@ group :staging, :production do
   gem 'appsignal',                '~> 2.3', '>= 2.3.7'
   gem 'asset_sync',               '~> 2.8', '>= 2.8.1'
   gem 'fog-aws',                  '~> 3.5', '>= 3.5.2'
+  gem 'aws-sdk-s3',               '~> 1.59', require: false
 end
 
 group :development, :test do

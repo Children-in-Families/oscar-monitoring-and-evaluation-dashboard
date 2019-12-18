@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'dashboards#index'
+  root to: 'donors#index'
+
   devise_for :users, controllers: { registrations: 'registrations', sessions: 'sessions', passwords: 'passwords' }
 
+  get '/robots.txt' => 'donors#robots'
   get '/dashboards' => 'dashboards#index'
   get '/robots.txt' => 'dashboards#robots'
   get '/data_trackers' => 'data_trackers#index'
