@@ -8,9 +8,9 @@
               .donor
                 - if donor.logo.representable?
                   = link_to dashboards_url(subdomain: donor.schema_name), class: 'donor-logo-link' do
-                    = image_tag donor.logo
+                    = image_tag url_for(donor.logo)
                 - elsif donor.logo.image?
-                  = link_to image_tag(donor.logo, width: 500), dashboards_url(subdomain: donor.schema_name), class: 'donor-logo-link'
+                  = link_to image_tag(url_for(donor.logo), width: 500), dashboards_url(subdomain: donor.schema_name), class: 'donor-logo-link'
                 - else
                   = link_to dashboards_url(subdomain: donor.schema_name), class: 'donor-logo-link' do
                     = image_tag donor.logo.filename.to_s, class: 'log-min img-responsive'
