@@ -24,6 +24,16 @@ class Donor < ApplicationRecord
     end
   end
 
+  def public_logo_url
+    if self.logo&.attached?
+      if Rails.env.development?
+        Rails.application.routes.url_helpers.rails_blob_url(self.logo, only_path: true)
+      else
+        self.logo&.service_url&.split("?")&.first
+      end
+    end
+  end
+
   private
     def main_picture_format
       return unless logo.attached?
