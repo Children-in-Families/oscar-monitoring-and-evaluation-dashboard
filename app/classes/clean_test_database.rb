@@ -1,6 +1,6 @@
 class CleanTestDatabase
 
-  TABLE_TO_EXCLUDE = ['spatial_ref_sys', 'schema_migrations', 'ar_internal_metadata']
+  TABLE_TO_EXCLUDE = ['spatial_ref_sys', 'schema_migrations', 'ar_internal_metadata', 'donors', 'active_storage_attachments', 'active_storage_attachments_id_seq', 'active_storage_blobs', 'active_storage_blobs_id_seq']
   CONNECTION = ActiveRecord::Base.connection
 
   def self.clean(*tenants)

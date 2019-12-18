@@ -1,7 +1,6 @@
-class DashboardsController < ApplicationController
-  before_action :authenticate_user!
-
+class DonorsController < ApplicationController
   def index
+    @donors = Donor.active.order(:created_at)
   end
 
   def robots

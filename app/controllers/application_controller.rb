@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   include Pundit
 
-  before_action :authenticate_user!
   protect_from_forgery with: :null_session, if: proc { |c| c.request.format == 'application/json' }
 
   before_action :set_locale
@@ -22,10 +21,6 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }.merge(options)
   end
 
-  def after_sign_out_path_for(_resource_or_scope)
-    root_url
-  end
-
   helper_method :current_donor
 
   protected
@@ -38,6 +33,10 @@ class ApplicationController < ActionController::Base
 
     def current_donor
       Donor.current
+    end
+
+    def after_sign_out_path_for(_resource_or_scope)
+      root_url(host: request.domain, subdomain: 'mande')
     end
 
     def set_locale

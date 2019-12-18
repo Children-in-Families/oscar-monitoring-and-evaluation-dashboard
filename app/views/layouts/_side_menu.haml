@@ -4,7 +4,7 @@
       %li.nav-header
         .dropdown.profile-element
           .image-wrapper.text-center
-            = image_tag 'fsi.png', width: '100'
+            = current_donor_logo
           %hr.line-border
           %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             %span.clear
@@ -18,7 +18,7 @@
             %li
               = link_to t('.logout'), destroy_user_session_path, method: :delete
         .logo-element
-          = image_tag 'fsi.png', class: 'log-min img-responsive'
+          = current_donor_logo('log-min img-responsive')
       %li{ class: is_active_controller('dashboard') }
         = link_to root_path do
           = fa_icon('th-large')

@@ -25,6 +25,7 @@ module OscarMEDashboard
     config.load_defaults 6.0
     # config.middleware.use Apartment::Elevators::Subdomain
     # config.middleware.insert_before Warden::Manager, Apartment::Elevators::Subdomain
+    config.autoload_paths << Rails.root.join('lib')
     config.hosts.clear
 
     config.i18n.default_locale = :en
@@ -48,6 +49,6 @@ module OscarMEDashboard
     end
 
     config.exceptions_app = self.routes
-
+    ActiveStorage::Engine.config.active_storage.content_types_to_serve_as_binary.delete('image/svg+xml')
   end
 end

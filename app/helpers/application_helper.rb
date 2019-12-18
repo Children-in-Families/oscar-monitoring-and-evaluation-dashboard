@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def whodunnit(type, id)
     user_id = PaperTrail::Version.find_by(event: 'create', item_type: type, item_id: id).try(:whodunnit)
     return 'OSCaR Team' if user_id.blank? || (user_id.present? && user_id.include?('@rotati'))
@@ -43,5 +42,19 @@ module ApplicationHelper
 
   def date_format(date)
     date.strftime('%d %B %Y') if date.present?
+  end
+
+  def current_donor_logo(klasses='')
+    if current_donor.logo.attached?
+      if current_donor.logo.representable?
+        link_to dashboards_url(subdomain: current_donor.schema_name) do
+          image_tag current_donor.logo, width: 100, class: klasses
+        end
+      elsif current_donor.logo.image?
+        link_to image_tag(current_donor.logo, width: 100, class: klasses, style: 'background-color: white; padding: 5px;'), dashboards_url(subdomain: current_donor.schema_name), class: 'donor-logo-link'
+      else
+        image_tag current_donor.logo.filename.to_s, class: klasses
+      end
+    end
   end
 end

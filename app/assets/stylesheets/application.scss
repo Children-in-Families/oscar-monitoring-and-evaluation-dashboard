@@ -9,10 +9,12 @@
 @import 'toastr/toastr.min';
 @import 'iCheck/custom';
 @import 'style';
+@import 'global';
 @import 'common';
 @import 'icheck/square/green';
 
 @import 'sessions/new';
+@import 'donors/index';
 @import 'users/*';
 @import 'clients/*';
 @import 'data_trackers/*';

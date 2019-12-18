@@ -1,6 +1,14 @@
 class SessionsController < Devise::SessionsController
   before_action :set_whodunnit, :detect_browser
 
+  def new
+    if request.subdomain == 'mande'
+      redirect_to root_url(host: request.domain, subdomain: 'mande')
+    else
+      super
+    end
+  end
+
   def sign_out
     session.delete :locale
     super

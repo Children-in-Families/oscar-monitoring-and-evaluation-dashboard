@@ -1,0 +1,18 @@
+.row.mini-margin
+  .col-xs-12.col-sm-8.col-sm-offset-2
+    .dornors
+      .row
+        - @donors.each do |donor|
+          .col-xs-6.col-sm-4
+            - if donor.logo.attached?
+              .donor
+                - if donor.logo.representable?
+                  = link_to dashboards_url(subdomain: donor.schema_name), class: 'donor-logo-link' do
+                    = image_tag donor.logo
+                - elsif donor.logo.image?
+                  = link_to image_tag(donor.logo, width: 500), dashboards_url(subdomain: donor.schema_name), class: 'donor-logo-link'
+                - else
+                  = link_to dashboards_url(subdomain: donor.schema_name), class: 'donor-logo-link' do
+                    = image_tag donor.logo.filename.to_s, class: 'log-min img-responsive'
+
+
