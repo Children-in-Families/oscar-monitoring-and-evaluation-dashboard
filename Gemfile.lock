@@ -187,7 +187,7 @@ GEM
     eventmachine (1.2.7-java)
     eventmachine (1.2.7-x64-mingw32)
     eventmachine (1.2.7-x86-mingw32)
-    excon (0.70.0)
+    excon (0.71.0)
     execjs (2.7.0)
     factory_bot (5.0.2)
       activesupport (>= 4.2.0)
