@@ -12,7 +12,7 @@ gem 'bootsnap',                 '>= 1.4.2', require: false
 
 gem 'uglifier',                 '>= 1.3.0'
 gem 'coffee-rails',             '~> 5.0'
-gem 'bootstrap-sass',           '~> 3.3.5'
+gem 'bootstrap-sass',           '~> 3.4.1'
 gem 'sass-rails',               '~> 5'
 gem 'jquery-rails',             '~> 4.3', '>= 4.3.5'
 gem 'font-awesome-rails',       '~> 4.7', '>= 4.7.0.5'
